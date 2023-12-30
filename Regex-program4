@@ -1,0 +1,12 @@
+import re
+
+def match_word_at_beginning(input_str):
+    pattern = re.compile(r'^\w+')
+    return "Matched" if pattern.match(input_str) else "Not matched"
+
+# Test Cases
+test_cases = ["$This is a string.", "This is a string"]
+
+for test_case in test_cases:
+    output = match_word_at_beginning(test_case)
+    print(f"Input: {test_case}\nOutput: {output}\n")
