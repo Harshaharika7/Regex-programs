@@ -1,0 +1,12 @@
+import re
+
+def match_N_followed_by_o(input_str):
+    pattern = re.compile(r'N(o*)$')
+    return "Matched" if pattern.match(input_str) else "Not matched"
+
+# Test Cases
+test_cases = ["Noa", "N", "Noooo"]
+
+for test_case in test_cases:
+    output = match_N_followed_by_o(test_case)
+    print(f"Input: {test_case}\nOutput: {output}\n")
