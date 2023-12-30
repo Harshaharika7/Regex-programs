@@ -1,0 +1,12 @@
+import re
+
+def match_number_at_end(input_str):
+    pattern = re.compile(r'\d+$')
+    return "Matched" if pattern.search(input_str) else "Not matched"
+
+# Test Cases
+test_cases = ["This is a string 1 example.", "This is a string example 1."]
+
+for test_case in test_cases:
+    output = match_number_at_end(test_case)
+    print(f"Input: {test_case}\nOutput: {output}\n")
